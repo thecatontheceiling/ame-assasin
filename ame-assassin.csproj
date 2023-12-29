@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\home-pc\Downloads\ame-assassin\ame-assassin.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF4E4716-BD72-46F0-B23B-2F79B180BAAA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>ame-assassin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Sqlite">
+      <HintPath>lib\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.TaskScheduler">
+      <HintPath>lib\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Tasks\Scope.cs" />
+    <Compile Include="Tasks\ITaskAction.cs" />
+    <Compile Include="Tasks\TaskList.cs" />
+    <Compile Include="Tasks\UninstallTask.cs" />
+    <Compile Include="Tasks\UninstallTaskPrivilege.cs" />
+    <Compile Include="Tasks\UninstallTaskStatus.cs" />
+    <Compile Include="Actions\CmdAction.cs" />
+    <Compile Include="Actions\FileAction.cs" />
+    <Compile Include="Actions\RegistryKeyOperation.cs" />
+    <Compile Include="Actions\RegistryKeyAction.cs" />
+    <Compile Include="Actions\RegistryValueOperation.cs" />
+    <Compile Include="Actions\RegistryValueType.cs" />
+    <Compile Include="Actions\RegistryValueAction.cs" />
+    <Compile Include="Actions\Privilege.cs" />
+    <Compile Include="Actions\RunAction.cs" />
+    <Compile Include="Actions\ScheduledTaskOperation.cs" />
+    <Compile Include="Actions\ScheduledTaskAction.cs" />
+    <Compile Include="Actions\ServiceOperation.cs" />
+    <Compile Include="Actions\ServiceAction.cs" />
+    <Compile Include="Actions\TaskKillAction.cs" />
+    <Compile Include="SystemPackage.cs" />
+    <Compile Include="FileLock.cs" />
+    <Compile Include="Initializer.cs" />
+    <Compile Include="Triggers.cs" />
+    <Compile Include="Assassin.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="RegistryManager.cs" />
+    <Compile Include="RegistryValue.cs" />
+    <Compile Include="Win32.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
