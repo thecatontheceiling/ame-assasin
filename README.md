@@ -1,1 +1,1 @@
-someone needs to murder whoever wrote this shit
+This is the decompiled/"deobfuscated" source code to AME Wizard. Probably pretty old now so I may update this
